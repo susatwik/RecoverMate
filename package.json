@@ -1,0 +1,8 @@
+{
+  "name": "recovermate",
+  "private": true,
+  "scripts": {
+    "client:build": "npm run build --prefix client",
+    "server:start": "npm run start --prefix server"
+  }
+}

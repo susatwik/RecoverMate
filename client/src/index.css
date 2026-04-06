@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 
+      Global Theme: Professional Light
+      Background: #F8FAFC (Slate 50)
+      Card: #FFFFFF (White)
+      Text: #0F172A (Slate 900)
+    */
+
+    /* Backgrounds */
+    --background: 210 40% 98%;
+    /* Slate 50 approx - using HSL for consistency */
+    --foreground: 222.2 47.4% 11.2%;
+    /* Slate 900 */
+
+    /* Cards */
+    --card: 0 0% 100%;
+    /* White */
+    --card-foreground: 222.2 47.4% 11.2%;
+    /* Slate 900 */
+
+    /* Popovers */
+    --popover: 0 0% 100%;
+    /* White */
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    /* Primary Action: Blue 500 #3B82F6 -> 217 91% 60% */
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary / Subtlety */
+    /* Slate 100 #F1F5F9 -> 210 40% 96.1% */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Muted Text / BGs */
+    /* Slate 200 #E2E8F0 -> 214.3 31.8% 91.4% (bg) */
+    /* Slate 500 #64748B -> 215 16% 47% (text) */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Accents (for items that need to stand out but not be primary) */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    /* Destructive / Errors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders: #E5E7EB (Gray 200) -> 220 13% 91% */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    /* Same as primary */
+
+    --radius: 0.75rem;
+    /* 12px */
+  }
+
+  /* Enforce light mode even if system prefers dark, or map dark to the same light theme for now to strictly follow "Professional, Light" requirement */
+  .dark {
+    /* Mapping same values as root to disable dark mode effectively or just keep it consistent */
+    --background: 210 40% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
