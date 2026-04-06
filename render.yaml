@@ -24,10 +24,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: recovermate-api
-          property: url
+        value: https://recovermate-api.onrender.com
     routes:
       - type: rewrite
         source: /*
